@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="da" datatype="plaintext" original="email.en.xlf">
+    <body>
+      <trans-unit id="pjr3FDv" resname="registration.subject">
+        <source>registration.subject</source>
+        <target>Aktiver din konto</target>
+      </trans-unit>
+      <trans-unit id="QtcznHC" resname="registration.title">
+        <source>registration.title</source>
+        <target>Velkommen %username%</target>
+      </trans-unit>
+      <trans-unit id="YMLel3P" resname="registration.button">
+        <source>registration.button</source>
+        <target>Aktiver din konto</target>
+      </trans-unit>
+      <trans-unit id="1ZLD_Y0" resname="reset.subject" xml:space="preserve">
+        <source>reset.subject</source>
+        <target state="needs-translation">Nulstil dit kodeord</target>
+      </trans-unit>
+      <trans-unit id="G2mhn_2" resname="reset.title" xml:space="preserve">
+        <source>Forgot your password?</source>
+        <target state="needs-translation">Det kan ske …</target>
+      </trans-unit>
+      <trans-unit id="qbt.84Y" resname="reset.button" xml:space="preserve">
+        <source>reset.button</source>
+        <target state="needs-translation">Nulstil dit kodeord</target>
+      </trans-unit>
+      <trans-unit id="rhkMAep" resname="reset.intro" xml:space="preserve">
+        <source>Don't worry, Kimai will help you create a new one!</source>
+        <target state="needs-translation">... så du har glemt dit kodeord? Intet problem: Kimai hjælper dig med at oprette et nyt:</target>
+      </trans-unit>
+      <trans-unit id="8jDJmrK" resname="automated_email_dont_answer" xml:space="preserve">
+        <source>automated_email_dont_answer</source>
+        <target state="translated">Dette er en automatisk genereret e-mail. Svar venligst ikke på den, modtager postkassen bliver ikke læst.</target>
+      </trans-unit>
+      <trans-unit id="IkjnHoP" resname="registration.intro" xml:space="preserve">
+        <source>You signed up at the Kimai time-tracker with the e-mail address %email%. Please activate your account in the next few hours, before the link expires.</source>
+        <target state="translated">Du har tilmeldt dig Kimai tidsregistrering med e-mail adressen %email%. Aktiver venligst din konto i løbet af de næste par timer, inden linket udløber.</target>
+      </trans-unit>
+      <trans-unit id="yohIAA_" resname="absence_created_supervisor_subject" xml:space="preserve">
+        <source>absence_created_supervisor_subject</source>
+        <target state="translated">Nyt fravær | %user% | %type%</target>
+      </trans-unit>
+      <trans-unit id="wwLx._J" resname="absence_created_supervisor_message" xml:space="preserve">
+        <source>A new absence was created for %user%.
+
+%list%
+
+Please review them at: %url%</source>
+        <target state="translated">Et nyt fravær er oprettet af %user%.
+
+%list%
+
+Gennemgå dem her: %url%</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

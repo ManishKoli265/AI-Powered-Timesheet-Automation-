@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="id" datatype="plaintext" original="flashmessages.en.xlf">
+    <body>
+      <trans-unit id="S9k1S7Z" resname="warning">
+        <source>warning</source>
+        <target state="translated">Peringatan</target>
+      </trans-unit>
+      <trans-unit id="WmrEP_5" resname="timesheet.stop.success">
+        <source>timesheet.stop.success</source>
+        <target state="translated">Perekaman waktu dihentikan</target>
+      </trans-unit>
+      <trans-unit id="NPBnpK_" resname="timesheet.stop.error" xml:space="preserve">
+        <source>timesheet.stop.error</source>
+        <target state="translated">Perekaman waktu tidak dapat dihentikan</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

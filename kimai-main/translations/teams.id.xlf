@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="id" datatype="plaintext" original="teams.en.xlf">
+    <body>
+      <trans-unit id="A_4Fc7c" resname="teams.project_access">
+        <source>teams.project_access</source>
+        <target state="translated">Beri akses ke proyek</target>
+      </trans-unit>
+      <trans-unit id="QchGnbx" resname="teams.customer_access" xml:space="preserve">
+        <source>teams.customer_access</source>
+        <target state="translated">Izinkan akses ke pelanggan</target>
+      </trans-unit>
+      <trans-unit id=".yIcFDx" resname="team.visibility_global" xml:space="preserve">
+        <source>team.visibility_global</source>
+        <target state="translated">Dapat dilihat oleh semua orang, karena belum ada tim yang ditugaskan.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
