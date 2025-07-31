@@ -80,7 +80,7 @@ def extract_date(text):
 # ==== /start ====
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "👋 Hi Kiru! Use /logtext followed by your time entry.\n"
+        " Hi Manish! Use /logtext followed by your time entry.\n"
         "Example:\n"
         "/logtext I worked 2 hours on CI/CD for Pepsico or from 3 PM to 5 PM"
     )
@@ -90,7 +90,7 @@ async def logtext(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         user_input = " ".join(context.args)
         if not user_input:
-            await update.message.reply_text("❗ Please enter text after /logtext")
+            await update.message.reply_text(" Please enter text after /logtext")
             return
 
         parsed = json.loads(parse_with_gpt(user_input))
@@ -109,11 +109,11 @@ async def logtext(update: Update, context: ContextTypes.DEFAULT_TYPE):
             duration = float(parsed.get("duration_hours", 1.0))
 
         if not project_id:
-            await update.message.reply_text("❌ Could not match project name.")
+            await update.message.reply_text(" Could not match project name.")
             return
 
         if not activity_id:
-            await update.message.reply_text("❌ Could not match activity name.")
+            await update.message.reply_text(" Could not match activity name.")
             return
 
         entry_date = extract_date(user_input)
@@ -133,11 +133,11 @@ async def logtext(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         res = requests.post(f"{KIMAI_URL}/api/timesheets", headers=HEADERS, json=payload)
         if res.status_code == 200:
-            await update.message.reply_text(f"✅ Logged time: {description} for {start.strftime('%Y-%m-%d')}")
+            await update.message.reply_text(f" Logged time: {description} for {start.strftime('%Y-%m-%d')}")
         else:
-            await update.message.reply_text(f"❌ Kimai error: {res.status_code} - {res.text}")
+            await update.message.reply_text(f" Kimai error: {res.status_code} - {res.text}")
     except Exception as e:
-        await update.message.reply_text(f"⚠️ Error: {e}")
+        await update.message.reply_text(f" Error: {e}")
 
 # ==== /report ====
 async def report(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -159,15 +159,15 @@ async def report(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         res = requests	.get(f"{KIMAI_URL}/api/timesheets", headers=HEADERS, params=params)
         if res.status_code != 200:
-            await update.message.reply_text(f"❌ Failed: {res.status_code} - {res.text}")
+            await update.message.reply_text(f" Failed: {res.status_code} - {res.text}")
             return
 
         entries = res.json()
         if not entries:
-            await update.message.reply_text(f"ℹ️ No entries found in {period}.")
+            await update.message.reply_text(f" No entries found in {period}.")
             return
 
-        summary = f"📋 Admin's {period.capitalize()} Report\n"
+        summary = f" Admin's {period.capitalize()} Report\n"
         total_hours = 0
         for e in entries:
             hrs = round(e['duration'] / 3600, 2)
@@ -176,11 +176,11 @@ async def report(update: Update, context: ContextTypes.DEFAULT_TYPE):
             act = ACTIVITY_NAMES.get(e.get('activity', ''), '-') if e.get('activity') else "-"
             desc = e.get('description', '-')
             summary += f"- {proj} | {act} | {hrs}h | {desc}\n"
-        summary += f"\n🕒 Total: {total_hours} hours"
+        summary += f"\n Total: {total_hours} hours"
 
         await update.message.reply_text(summary)
     except Exception as e:
-        await update.message.reply_text(f"⚠️ Report error: {e}")
+        await update.message.reply_text(f" Report error: {e}")
 
 # ==== Bot Setup ====
 app = ApplicationBuilder().token(BOT_TOKEN).build()
